@@ -6,33 +6,33 @@ import Card from '../components/Card';
 
 const data = [
   {
-    image: require("../assets/icons/filter.png"),
-    title: 'Order New Air Filters',
+    image: require("../assets/icons/vitals.png"),
+    title: 'Add Services 1',
     number: '60%',
   },
   {
-    image: require("../assets/icons/twodrop.png"),
-    title: 'Order Mineral Cartridge',
+    image: require("../assets/icons/vitals.png"),
+    title: 'Add Services 2',
     number: '18 pts',
   },
   {
-    image: require("../assets/icons/twodrop.png"),
-    title: 'Order Low Humidity Service Pack',
+    image: require("../assets/icons/vitals.png"),
+    title: 'Add Services 3',
     number: '25%',
   },
   {
-    image: require("../assets/icons/twodrop.png"),
-    title: 'Order Charcoal Cartridge',
+    image: require("../assets/icons/vitals.png"),
+    title: 'Add Services 4',
     number: 112,
   },
   {
-    image: require("../assets/icons/twodrop.png"),
-    title: 'Order UV Led Cartridge',
+    image: require("../assets/icons/vitals.png"),
+    title: 'Add Services 5',
     number: 468,
   },
   {
     image: require("../assets/icons/twodrop.png"),
-    title: 'Order Genesis Accessories',
+    title: 'Add Services 6',
     number: 13,
   },
 ];

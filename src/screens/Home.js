@@ -6,28 +6,28 @@ import SwipeButton from 'rn-swipe-button';
 
 const data = [
   {
-    image: require("../assets/icons/humid.png"),
-    title: 'Ambient Humidity',
+    image: require("../assets/icons/vitals.png"),
+    title: 'Your Info',
     number: '60%',
   },
   {
-    image: require("../assets/icons/drop.png"),
-    title: 'Gal/H',
+    image: require("../assets/icons/vitals.png"),
+    title: 'Your Info',
     number: 4.68,
   },
   {
-    image: require("../assets/icons/temp.png"),
-    title: 'System Power',
+    image: require("../assets/icons/vitals.png"),
+    title: 'Your Info',
     number: '18 kWh',
   },null,
   {
-    image: require("../assets/icons/humid.png"),
-    title: 'Wind',
+    image: require("../assets/icons/vitals.png"),
+    title: 'Your Info',
     number: '30 knt',
   },
   {
-    image: require("../assets/icons/drops.png"),
-    title: 'Gal/Day',
+    image: require("../assets/icons/vitals.png"),
+    title: 'Your Info',
     number: 112.3,
   },
 ];
@@ -35,7 +35,7 @@ const data = [
 
 const Home = () => {
 
-  const [buttonTitle, setButtonTitle] = useState("Make Water!");
+  const [buttonTitle, setButtonTitle] = useState("Your intended action!");
   const [buttonColors, setButtonColors] = useState({
     railFillBackgroundColor: "#007fff",
     thumbIconBackgroundColor: "#007fff",
@@ -46,9 +46,9 @@ const Home = () => {
 
     // Toggle the button title
     if (buttonTitle === "Make Water!") {
-      setButtonTitle("Water's running");
+      setButtonTitle("This Action");
     } else {
-      setButtonTitle("Make Water!");
+      setButtonTitle("Start Walk");
     }
 
     // Toggle the button colors
@@ -58,14 +58,14 @@ const Home = () => {
         thumbIconBackgroundColor: "#ffffff",
         railBackgroundColor: "#007fff",
       });
-      alert('Water Cube Activated!');
+      alert('Walk Completed!');
     } else {
       setButtonColors({
         railFillBackgroundColor: "4cd9e2",
         thumbIconBackgroundColor: "#ffffff",
         railBackgroundColor: "green",
       });
-      alert('Water Cube Deactivated!');
+      alert('Walk Completed!');
     }
     
   };

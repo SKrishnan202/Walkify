@@ -6,23 +6,23 @@ import SwipeButton from 'rn-swipe-button';
 
 const data = [
   {
-    image: require("../assets/icons/twodrop.png"),
-    title: 'Order Low Humidity Service Pack',
+    image: require("../assets/icons/vitals.png"),
+    title: 'Listed Service 1',
     number: '25%',
   },
   {
-    image: require("../assets/icons/twodrop.png"),
-    title: 'Order Charcoal Cartridge',
+    image: require("../assets/icons/vitals.png"),
+    title: 'Listed Service 2',
     number: 112,
   },
   {
-    image: require("../assets/icons/twodrop.png"),
-    title: 'Order UV Led Cartridge',
+    image: require("../assets/icons/vitals.png"),
+    title: 'Listed Service 3',
     number: 468,
   },
   {
-    image: require("../assets/icons/twodrop.png"),
-    title: 'Order Genesis Accessories',
+    image: require("../assets/icons/vitals.png"),
+    title: 'Listed Service 4',
     number: 13,
   },
 ];

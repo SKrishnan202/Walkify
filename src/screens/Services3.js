@@ -5,23 +5,23 @@ import Card from '../components/Card';
 
 const data = [
   {
-    image: require("../assets/icons/drop.png"),
-    title: 'Gal/H',
+    image: require("../assets/icons/vitals.png"),
+    title: 'Info 1',
     number: 1.68,
   },
   {
-    image: require("../assets/icons/drops.png"),
-    title: 'Gal/Day',
+    image: require("../assets/icons/vitals.png"),
+    title: 'Info 2',
     number: 11.3,
   },
   {
-    image: require("../assets/icons/humid.png"),
-    title: 'Ambient Humidity',
+    image: require("../assets/icons/vitals.png"),
+    title: 'Info 3',
     number: '99%',
   },
   {
-    image: require("../assets/icons/temp.png"),
-    title: 'System Power',
+    image: require("../assets/icons/vitals.png"),
+    title: 'Info 4',
     number: '34 kWh',
   },
 ];

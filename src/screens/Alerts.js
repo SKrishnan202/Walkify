@@ -1,73 +1,61 @@
-import React, { useCallback, useState } from 'react';
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, FlatList, Switch } from 'react-native';
-import Card from '../components/Card';
+import React, {useEffect} from 'react';
+import { View, StyleSheet, FlatList } from 'react-native';
+import MySlider from '../components/Slider';
+import Container from '../components/Container';
 
+const Alerts = (props) => {
 
 const data = [
-  {
-    image: require("../assets/icons/pump.png"),
-    title: 'Pump Failure!',
-    number: '60%',
-  },
-  {
-    image: require("../assets/icons/uv.png"),
-    title: 'Change UV Light',
-    number: '18 kWh',
-  },
-  {
-    image: require("../assets/icons/outage.png"),
-    title: 'Power Outage System Shutdown',
-    number: 4.68,
-  },
-  {
-    image: require("../assets/icons/filter.png"),
-    title: 'Replace Air Filters',
-    number: 112.3,
-  },
-];
+    {month:'Walking',icon:'lightning-bolt',familyIcon:'material-community'},
+    {month:'Running',icon:'lightning-bolt',familyIcon:'material-community'},
+    {month:'Jogging',icon:'lightning-bolt',familyIcon:'material-community'},
+    {month:'Pulse',icon:'lightning-bolt',familyIcon:'material-community'},
+    {month:'Daily Calories',icon:'lightning-bolt',familyIcon:'material-community'},
+    {month:'Cholesterol Level',icon:'lightning-bolt',familyIcon:'material-community'},
+    {month:'Value 1',icon:'lightning-bolt',familyIcon:'material-community'},
+    {month:'Value 2',icon:'lightning-bolt',familyIcon:'material-community'},
+    {month:'Value 3',icon:'lightning-bolt',familyIcon:'material-community'},
+    {month:'Value 4',icon:'lightning-bolt',familyIcon:'material-community'},
+    {month:'Value 5',icon:'lightning-bolt',familyIcon:'material-community'},
+    {month:'Value 6',icon:'lightning-bolt',familyIcon:'material-community'},
+]
 
+useEffect(() => {
 
-const Home = () => {
+    const unsubscribe = props.navigation.addListener('tabPress', (e) => {
+      e.preventDefault();
+      props.navigation.navigate('Home', { screen: 'Tab6', title:'Energy Usage' })
+    });
+  
+    return unsubscribe;
+}, []);
 
-  const renderItem = useCallback(({ item, index }) => {
-    return (
-      <Card
-        item={item}
-        onPress={null}
-        style={{ marginRight: index % 2 === 0 ? 4 : 0, marginBottom: 4 }}
-        numberStyle={{color:'orange'}}
-      />
-    );
-  }, []);
+const renderItem = ({ item, index }) => {
 
-  return (
-    <View style={styles.container}>
-      <FlatList
-        data={data}
-        renderItem={renderItem}
-        numColumns={2}
-        showsVerticalScrollIndicator={false}
-        contentContainerStyle={styles.contentContainerStyle}
-      />
-
-      <StatusBar style="auto" />
-    </View>
-  );
+    return(
+        <MySlider month={item.month} icon={item.icon} familyIcon={item.familyIcon}  />
+    )
 }
 
-export default Home;
+return (
+
+  <Container style={styles.container}>
+     <FlatList
+        data={data}
+        renderItem={renderItem}
+      />
+  </Container>
+
+);
+
+};
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    flexDirection: 'row',
-    padding: 25
-  },
 
-  contentContainerStyle: {
-    paddingHorizontal: 4,
-    paddingBottom: 49,
+  container: {
+    marginBottom:50
   },
-});
+  
+  });
+  
+  export default Alerts;

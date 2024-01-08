@@ -12,6 +12,10 @@ import {
     faList,
     faHome,
     faListUl,
+    faClock,
+    faHeartPulse,
+    faCalendar,
+    faPersonCane
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import Home from '../screens/Home';
@@ -56,8 +60,8 @@ function TabNavigator() {
             }}>
             <BottomTabs.Screen name="Tab1" component={Home}
                 options={{
-                    headerTitle: 'Dashboard',
-                    tabBarLabel: 'Dashboard',
+                    headerTitle: 'Home',
+                    tabBarLabel: 'Home',
                     tabBarIcon: ({ color, size }) => (
                         <FontAwesomeIcon icon={faHome} size={size} color={color} />
                     ),
@@ -65,40 +69,40 @@ function TabNavigator() {
             />
             <BottomTabs.Screen name="Tab2" component={Services1}
                 options={{
-                    headerTitle: 'Control Panel 1',
-                    tabBarLabel: 'Panel 1',
+                    headerTitle: 'Patient: John Smith',
+                    tabBarLabel: 'Time',
                     tabBarIcon: ({ color, size }) => (
-                        <FontAwesomeIcon icon={faList} size={size} color={color} />
+                        <FontAwesomeIcon icon={faClock} size={size} color={color} />
                     ),
                 }} />
             <BottomTabs.Screen name="Tab3" component={Services2}
                 options={{
-                    headerTitle: 'Control Panel 2',
-                    tabBarLabel: 'Panel 2',
+                    headerTitle: 'Patient: John Smith',
+                    tabBarLabel: 'Vitals',
                     tabBarIcon: ({ color, size }) => (
-                        <FontAwesomeIcon icon={faListUl} size={size} color={color} />
+                        <FontAwesomeIcon icon={faHeartPulse} size={size} color={color} />
                     ),
                 }} />
             <BottomTabs.Screen name="Tab4" component={Services3}
                 options={{
-                    headerTitle: 'Control Panel 3',
-                    tabBarLabel: 'Panel 3',
+                    headerTitle: 'Patient: John Smith',
+                    tabBarLabel: 'Calendar',
                     tabBarIcon: ({ color, size }) => (
-                        <FontAwesomeIcon icon={faListCheck} size={size} color={color} />
+                        <FontAwesomeIcon icon={faCalendar} size={size} color={color} />
                     ),
                 }}
             />
             <BottomTabs.Screen name="Tab5" component={Alerts}
                 options={{
-                    headerTitle: 'Alerts',
-                    tabBarLabel: 'Alerts',
+                    headerTitle: 'Patient: John Smith',
+                    tabBarLabel: 'Walk',
                     tabBarIcon: ({ color, size }) => (
-                        <FontAwesomeIcon icon={faList} size={size} color={color} />
+                        <FontAwesomeIcon icon={faPersonCane} size={size} color={color} />
                     ),
                 }} />
             <BottomTabs.Screen name="Tab6" component={Settings}
                 options={{
-                    headerTitle: 'Settings',
+                    headerTitle: 'Patient: John Smith',
                     tabBarLabel: 'Settings',
                     tabBarIcon: ({ color, size }) => (
                         <FontAwesomeIcon icon={faGear} size={size} color={color} />
@@ -116,13 +120,13 @@ function StackNavigator() {
                 headerShown: false,
             }}
         >
-            <Stack.Screen name='Tabs' component={TabNavigator} />
-            <Stack.Screen name='Home' component={Home} />
-            <Stack.Screen name='Services1' component={Services1} />
-            <Stack.Screen name='Services2' component={Services2} />
-            <Stack.Screen name='Services3' component={Services3} />
-            <Stack.Screen name='Alerts' component={Alerts} />
-            <Stack.Screen name='Settings' component={Settings} />
+            <Stack.Screen name='Frame 1' component={TabNavigator} />
+            <Stack.Screen name='Frame 2' component={Home} />
+            <Stack.Screen name='Frame 3' component={Services1} />
+            <Stack.Screen name='Frame 4' component={Services2} />
+            <Stack.Screen name='Frame 5' component={Services3} />
+            <Stack.Screen name='Frame 6' component={Alerts} />
+            <Stack.Screen name='Frame 7' component={Settings} />
         </Stack.Navigator>
     )
 }
@@ -241,8 +245,8 @@ function MainNavigator() {
             <Drawer.Screen name="Services3" component={Services3} options={{
                 drawerIcon: () => <FontAwesomeIcon icon={faListCheck} color={'#007fff'} size={20} />
             }} />
-            <Drawer.Screen name="Alerts" component={Alerts} options={{
-                drawerIcon: () => <FontAwesomeIcon icon={faBell} color={'#007fff'} size={20} />
+            <Drawer.Screen name="Walk" component={Alerts} options={{
+                drawerIcon: () => <FontAwesomeIcon icon={faPersonCane} color={'#007fff'} size={20} />
             }} />
             <Drawer.Screen name="Settings" component={Settings} options={{
                 drawerIcon: () => <FontAwesomeIcon icon={faGear} color={'#007fff'} size={20} />
@@ -261,31 +265,31 @@ function CustomDrawerContent(props) {
             </View>
             {/* <DrawerItemList {...props} /> */}
             <DrawerItem
-                label="Dashboard"
+                label="Home"
                 icon={() => <FontAwesomeIcon icon={faHome} color={'#007fff'} size={20} />}
                 onPress={() => props.navigation.navigate('Home', { screen: 'Tab1' })}
             />
             <DrawerItem
-                label="Control Panel 1"
-                icon={() => <FontAwesomeIcon icon={faList} color={'#007fff'} size={20} />}
+                label="Time"
+                icon={() => <FontAwesomeIcon icon={faClock} color={'#007fff'} size={20} />}
                 onPress={() => props.navigation.navigate('Home', { screen: 'Tab2' })}
             />
 
             <DrawerItem
-                label="Control Panel 2"
-                icon={() => <FontAwesomeIcon icon={faListUl} color={'#007fff'} size={20} />}
+                label="Vitals"
+                icon={() => <FontAwesomeIcon icon={faHeartPulse} color={'#007fff'} size={20} />}
                 onPress={() => props.navigation.navigate('Home', { screen: 'Tab3' })}
             />
 
             <DrawerItem
-                label="Control Panel 3"
-                icon={() => <FontAwesomeIcon icon={faListCheck} color={'#007fff'} size={20} />}
+                label="Calendar"
+                icon={() => <FontAwesomeIcon icon={faCalendar} color={'#007fff'} size={20} />}
                 onPress={() => props.navigation.navigate('Home', { screen: 'Tab4' })}
             />
 
             <DrawerItem
-                label="Alerts"
-                icon={() => <FontAwesomeIcon icon={faBell} color={'#007fff'} size={20} />}
+                label="Walk"
+                icon={() => <FontAwesomeIcon icon={faPersonCane} color={'#007fff'} size={20} />}
                 onPress={() => props.navigation.navigate('Home', { screen: 'Tab5' })}
             />
 

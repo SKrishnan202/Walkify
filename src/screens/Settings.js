@@ -6,37 +6,37 @@ import SwipeButton from 'rn-swipe-button';
 
 const data = [
   {
-    image: require("../assets/icons/rightchevron.png"),
+    image: require("../assets/icons/vitals.png"),
     title: 'set1',
     number: '25%',
   },
   {
-    image: require("../assets/icons/rightchevron.png"),
+    image: require("../assets/icons/vitals.png"),
     title: 'set2',
     number: '75%',
   },
   {
-    image: require("../assets/icons/rightchevron.png"),
+    image: require("../assets/icons/vitals.png"),
     title: 'set3',
     number: '22%',
   },
   {
-    image: require("../assets/icons/rightchevron.png"),
+    image: require("../assets/icons/vitals.png"),
     title: 'set4',
     number: '25%',
   },
   {
-    image: require("../assets/icons/rightchevron.png"),
+    image: require("../assets/icons/vitals.png"),
     title: 'set2',
     number: '75%',
   },
   {
-    image: require("../assets/icons/rightchevron.png"),
+    image: require("../assets/icons/vitals.png"),
     title: 'set3',
     number: '22%',
   },
   {
-    image: require("../assets/icons/rightchevron.png"),
+    image: require("../assets/icons/vitals.png"),
     title: 'set4',
     number: '25%',
   },
