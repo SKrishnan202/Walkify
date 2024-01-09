@@ -39,9 +39,9 @@ function TabNavigator() {
                 tabBarInactiveTintColor: '#cfcfcf',
                 tabBarLabelStyle: { paddingBottom: 3, fontSize: 14, paddingTop: 7 },
                 tabBarIconStyle: { paddingBottom: 10 },
-                tabBarStyle: { padding: 18, backgroundColor: '#007fff', borderBlockColor: '#007fff', height: 60 },
+                tabBarStyle: { padding: 18, backgroundColor: '#251555', borderBlockColor: '#251555', height: 60 },
                 headerStyle: {
-                    backgroundColor: '#007fff',
+                    backgroundColor: '#251555',
                     shadowColor: 'transparent',
                     height: 60,
                     elevation: 0,
@@ -216,7 +216,7 @@ function MainNavigator() {
             screenOptions={({ navigation }) => ({
                 headerShown: false,
                 headerStyle: {
-                    backgroundColor: '#007fff',
+                    backgroundColor: '#251555',
                     shadowColor: 'transparent',
                     height: 60,
                     elevation: 0,
@@ -234,22 +234,22 @@ function MainNavigator() {
             })}
         >
             <Drawer.Screen name="Home" component={TabNavigator} options={{
-                drawerIcon: () => <FontAwesomeIcon icon={faHome} color={'#007fff'} size={20} />
+                drawerIcon: () => <FontAwesomeIcon icon={faHome} color={'#251555'} size={20} />
             }} />
             <Drawer.Screen name="Services1" component={Services1} options={{
-                drawerIcon: () => <FontAwesomeIcon icon={faList} color={'#007fff'} size={20} />
+                drawerIcon: () => <FontAwesomeIcon icon={faList} color={'#251555'} size={20} />
             }} />
             <Drawer.Screen name="Services2" component={Services2} options={{
-                drawerIcon: () => <FontAwesomeIcon icon={faListUl} color={'#007fff'} size={20} />
+                drawerIcon: () => <FontAwesomeIcon icon={faListUl} color={'#251555'} size={20} />
             }} />
             <Drawer.Screen name="Services3" component={Services3} options={{
-                drawerIcon: () => <FontAwesomeIcon icon={faListCheck} color={'#007fff'} size={20} />
+                drawerIcon: () => <FontAwesomeIcon icon={faListCheck} color={'#251555'} size={20} />
             }} />
             <Drawer.Screen name="Walk" component={Alerts} options={{
-                drawerIcon: () => <FontAwesomeIcon icon={faPersonCane} color={'#007fff'} size={20} />
+                drawerIcon: () => <FontAwesomeIcon icon={faPersonCane} color={"251555"} size={20} />
             }} />
             <Drawer.Screen name="Settings" component={Settings} options={{
-                drawerIcon: () => <FontAwesomeIcon icon={faGear} color={'#007fff'} size={20} />
+                drawerIcon: () => <FontAwesomeIcon icon={faGear} color={'#251555'} size={20} />
             }} />
 
         </Drawer.Navigator>
@@ -266,36 +266,36 @@ function CustomDrawerContent(props) {
             {/* <DrawerItemList {...props} /> */}
             <DrawerItem
                 label="Home"
-                icon={() => <FontAwesomeIcon icon={faHome} color={'#007fff'} size={20} />}
+                icon={() => <FontAwesomeIcon icon={faHome} color={'#251555'} size={20} />}
                 onPress={() => props.navigation.navigate('Home', { screen: 'Tab1' })}
             />
             <DrawerItem
                 label="Time"
-                icon={() => <FontAwesomeIcon icon={faClock} color={'#007fff'} size={20} />}
+                icon={() => <FontAwesomeIcon icon={faClock} color={'#251555'} size={20} />}
                 onPress={() => props.navigation.navigate('Home', { screen: 'Tab2' })}
             />
 
             <DrawerItem
                 label="Vitals"
-                icon={() => <FontAwesomeIcon icon={faHeartPulse} color={'#007fff'} size={20} />}
+                icon={() => <FontAwesomeIcon icon={faHeartPulse} color={'#251555'} size={20} />}
                 onPress={() => props.navigation.navigate('Home', { screen: 'Tab3' })}
             />
 
             <DrawerItem
                 label="Calendar"
-                icon={() => <FontAwesomeIcon icon={faCalendar} color={'#007fff'} size={20} />}
+                icon={() => <FontAwesomeIcon icon={faCalendar} color={'#251555'} size={20} />}
                 onPress={() => props.navigation.navigate('Home', { screen: 'Tab4' })}
             />
 
             <DrawerItem
                 label="Walk"
-                icon={() => <FontAwesomeIcon icon={faPersonCane} color={'#007fff'} size={20} />}
+                icon={() => <FontAwesomeIcon icon={faPersonCane} color={'#251555'} size={20} />}
                 onPress={() => props.navigation.navigate('Home', { screen: 'Tab5' })}
             />
 
             <DrawerItem
                 label="Settings"
-                icon={() => <FontAwesomeIcon icon={faGear} color={'#007fff'} size={20} />}
+                icon={() => <FontAwesomeIcon icon={faGear} color={'#251555'} size={20} />}
                 onPress={() => props.navigation.navigate('Home', { screen: 'Tab6' })}
             />
 

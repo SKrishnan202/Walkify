@@ -6,10 +6,10 @@ import Container from '../components/Container';
 const Alerts = (props) => {
 
 const data = [
-    {month:'Walking',icon:'lightning-bolt',familyIcon:'material-community'},
-    {month:'Running',icon:'lightning-bolt',familyIcon:'material-community'},
-    {month:'Jogging',icon:'lightning-bolt',familyIcon:'material-community'},
-    {month:'Pulse',icon:'lightning-bolt',familyIcon:'material-community'},
+    {month:'Walk Speed',icon:'lightning-bolt',familyIcon:'material-community'},
+    {month:'Posture',icon:'lightning-bolt',familyIcon:'material-community'},
+    {month:'Cadence',icon:'lightning-bolt',familyIcon:'material-community'},
+    {month:'Extension',icon:'lightning-bolt',familyIcon:'material-community'},
     {month:'Daily Calories',icon:'lightning-bolt',familyIcon:'material-community'},
     {month:'Cholesterol Level',icon:'lightning-bolt',familyIcon:'material-community'},
     {month:'Value 1',icon:'lightning-bolt',familyIcon:'material-community'},

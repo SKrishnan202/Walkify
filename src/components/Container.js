@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, ImageBackground } from 'react-native';
 
-const image = require('../assets/vitals.png');
+const image = require('../assets/purplevitals.png');
 
 const Container= ({
   children,
